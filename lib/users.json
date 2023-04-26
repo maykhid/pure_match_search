@@ -1,0 +1,53 @@
+[
+    {
+      "name": "Alice Smith",
+      "email": "alicesmith@example.com",
+      "join_date": "2022-01-05"
+    },
+    {
+      "name": "Bob Johnson",
+      "email": "bobjohnson@example.com",
+      "join_date": "2022-06-15"
+    },
+    {
+      "name": "Charlie Brown",
+      "email": "charliebrown@example.com",
+      "join_date": "2022-03-20"
+    },
+    {
+      "name": "David Lee",
+      "email": "davidlee@example.com",
+      "join_date": "2022-09-01"
+    },
+    {
+      "name": "Emily Davis",
+      "email": "emilydavis@example.com",
+      "join_date": "2022-04-12"
+    },
+    {
+      "name": "Frank Williams",
+      "email": "frankwilliams@example.com",
+      "join_date": "2022-08-28"
+    },
+    {
+      "name": "Grace Taylor",
+      "email": "gracetaylor@example.com",
+      "join_date": "2022-02-14"
+    },
+    {
+      "name": "Harry Brown",
+      "email": "harrybrown@example.com",
+      "join_date": "2022-07-07"
+    },
+    {
+      "name": "Isabel Clark",
+      "email": "isabelclark@example.com",
+      "join_date": "2022-05-23"
+    },
+    {
+      "name": "John Lee",
+      "email": "johnlee@example.com",
+      "join_date": "2022-11-11"
+    }
+  ]
+  

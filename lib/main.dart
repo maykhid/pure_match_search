@@ -14,7 +14,7 @@ class SearchTextFieldApp extends StatelessWidget {
     return CupertinoApp(
       theme: const CupertinoThemeData(brightness: Brightness.dark),
       home: ChangeNotifierProvider(
-        create: (context) => UserProvider()..getUsers(),
+        create: (context) => UserProvider(),
         child: const SearchTextFieldExample(),
       ),
     );

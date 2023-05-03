@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pure_match_search/fixture_reader.dart';
+import 'package:pure_match_search/core/utils/fixture_reader.dart';
 
-import 'users.dart';
+import '../../data/model/users.dart';
 
 class UserProvider extends ChangeNotifier {
   Users? _users;

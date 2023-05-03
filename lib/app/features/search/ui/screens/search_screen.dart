@@ -1,11 +1,11 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/user_provider.dart';
+import '../widgets/no_users_found.dart';
 import '../widgets/search_text_field.dart';
-import '../widgets/user_list_item.dart';
+import '../widgets/user_list_widget.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -47,10 +47,6 @@ class _SearchScreenState extends State<SearchScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              // // const SizedBox(
-              // //   height: 50,
-              // // ),
-              // Text(text),
               SearchTextField(
                 fieldValue: (String value) {
                   setState(() {
@@ -58,7 +54,6 @@ class _SearchScreenState extends State<SearchScreen> {
                   });
                 },
               ),
-
               SizedBox(
                 height: mediaQuery.size.height * 0.79,
                 width: mediaQuery.size.width,
@@ -67,32 +62,14 @@ class _SearchScreenState extends State<SearchScreen> {
                     if (userProvider.users?.users != null) {
                       // user not found
                       if (userProvider.users!.users.isEmpty) {
-                        return const Center(
-                            child: SizedBox(
-                          child: Text(
-                            'User does not exist',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        ));
+                        return const NoUsersFound();
                       }
 
                       // users available
-                      return ListView.separated(
-                          itemCount: userProvider.users?.users.length as int,
-                          separatorBuilder: (context, count) {
-                            return Container(
-                              color: Colors.black,
-                              width: 200,
-                              height: 5,
-                            );
-                          },
-                          itemBuilder: (context, count) {
-                            return UserListItem(
-                              user: userProvider.users!.users[count],
-                            );
-                          });
+                      return const UserListWidget();
                     }
 
+                    // return empty list
                     return Container();
                   },
                 ),

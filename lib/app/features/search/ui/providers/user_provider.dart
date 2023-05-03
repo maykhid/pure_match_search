@@ -16,7 +16,6 @@ class UserProvider extends ChangeNotifier {
   }
 
   searchUser(String searchTerm) {
-    // List<User> users = List<User>.empty();
     if (_users != null) {
       final searchResults = _users!.users.where(
           (user) => user.name.toLowerCase().contains(searchTerm.toLowerCase())).toList();
